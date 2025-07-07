@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+h1 {
+  margin: 12px 0 16px 0;
+}
+
+body{
+  font-family: "Ancizar Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: #5c5c5d 0px 0px 20px;
+}
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+address {
+  font-size: 0.7em;
+  width: 35vw;
+}
+
+/* .btn {
+  background-color: #d9d7d7;
+  color: #12012b;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.56em;
+  cursor: pointer;
+  width: 25vw;
+  height: 30px;
+} */
+
+.search-container {
+  display: flex;
+  justify-content: end;
+  /* margin-top: 20px; */
+  width: 30vw;
+  /* padding-left: 20px; */
+}
+
+form {
+  transform: translate(0, -0);
+  transition: all 1s;
+  width: 40px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 4px solid rgb(0, 0, 0);
+  padding: 5px;
+}
+
+input {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 30px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  font-size: 0.8em;
+  border-radius: 20px;
+  padding: 0 20px;
+  /* background-color: black; */
+  color: #ffffff;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 7px;
+  width: 32.5px;
+  height: 32.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+form:focus-within,
+form:hover,
+form:valid {
+  width: 27vw;
+  cursor: pointer;
+}
+
+form:hover input,
+form:focus-within input,
+form:valid input {
+  width: 100%;
+}
+
+form:hover .fa,
+form:focus-within .fa,
+form:valid .fa {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+form > button {
+  display: none;
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 4px;
+  min-height: max-content;
+  background: transparent;
+  outline: 0;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+form:valid form > button {
+  display: block;
+}
+
+.location-container ul {
+  position: relative;
+  margin-top: 40px;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  z-index: 50000;
+  padding: 10px;
+  width: 30vw;
+  height: 50vh;
+  margin-left: -10px;
+  flex-direction: column;
+  text-align: start;
+  white-space: normal;   
+  word-wrap: break-word;    
+  overflow-wrap: break-word; 
+  display: block;   
+  scroll-behavior: smooth;
+  /* overflow: hidden;i */
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.location-container ul li {
+  padding: 5px;
+  background-color: #000000b3;
+  color: #ffffff;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+
+hr {
+  margin-top: 10px;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.weather-summary {
+  margin-bottom: 20px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-stats {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+}
+
+.weather-stats > p {
+  font-size: 20px;
+}
+
+.weather-container {
+  font-size: 15px;
+  text-align: end;
+}
+
+.recharts-responsive-container{
+  position: relative;
+  z-index: 0;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.day-selector>div>p{
+  font-size: 0.8em;
+}
+
+@media screen and (min-width: 400px) {
+  h1 {
+  margin: 20px 0 40px 0;
+}
+  /* .btn {
+    font-size: 15px;
+    padding: 0;
+    width: 20vw;
+  } */
+  address {
+    font-size: 1em;
+    width: 40vw;
+  }
+  .search-container {
+    width: 25vw;
+  }
+  form:focus-within,
+  form:hover,
+  form:valid {
+    width: 23vw;
+    cursor: pointer;
+  }
+  .weather-container{
+    font-size: 1em;
+  }
+  .weather-stats > p {
+    font-size: 1.3em;
+  }
+  .weather-info{
+    padding: 0 20px;
+  }
+  .day-selector{
+    padding: 0 20px;
+  }
+  img{
+    width: 80px;
+  }
+  .location-container ul{
+    margin-left: -50px;
+  }
+  .day-selector {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px){
+ .weather-info{
+    padding: 0 100px;
+  }
+}
