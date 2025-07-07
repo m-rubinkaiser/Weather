@@ -50,7 +50,7 @@ function App() {
       try {
         const apiUrl = process.env.REACT_APP_API_URL;
         const key = process.env.REACT_APP_API_KEY;
-        console.log(process.env.REACT_APP_API_URL)
+        // console.log(process.env.REACT_APP_API_URL)
         // const key = "912ce8ff47ed40b7a5171144251305";
         if (searchedLocation) {
           console.log(searchedLocation);
